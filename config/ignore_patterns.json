@@ -1,0 +1,53 @@
+{
+  "ignore_dirs": [
+    ".git",
+    "node_modules",
+    "__pycache__",
+    ".venv",
+    "venv",
+    "dist",
+    "build",
+    ".next",
+    ".idea",
+    ".vscode",
+    ".pytest_cache",
+    ".mypy_cache",
+    ".ruff_cache",
+    ".turbo",
+    ".vite",
+    "coverage",
+    "out"
+  ],
+  "ignore_files": [
+    ".env",
+    ".DS_Store",
+    "Thumbs.db",
+    "package-lock.json",
+    "yarn.lock",
+    "pnpm-lock.yaml"
+  ],
+  "ignore_extensions": [
+    ".png",
+    ".jpg",
+    ".jpeg",
+    ".gif",
+    ".webp",
+    ".ico",
+    ".svg",
+    ".exe",
+    ".dll",
+    ".zip",
+    ".rar",
+    ".7z",
+    ".pdf",
+    ".mp4",
+    ".mp3",
+    ".pyc",
+    ".pyo",
+    ".log",
+    ".tmp",
+    ".db",
+    ".sqlite",
+    ".sqlite3"
+  ]
+}

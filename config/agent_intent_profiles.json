@@ -1,0 +1,349 @@
+{
+  "project_focus": "python_backend",
+  "depth_profiles": {
+    "quick": {
+      "max_steps": 5,
+      "strategy_depth": "quick"
+    },
+    "normal": {
+      "max_steps": 8,
+      "max_auto_steps": 11,
+      "strategy_depth": "normal"
+    },
+    "deep": {
+      "max_steps": 12,
+      "max_auto_steps": 18,
+      "strategy_depth": "deep"
+    }
+  },
+  "intents": {
+    "overview": {
+      "priority": 10,
+      "keywords": [
+        "analisis project",
+        "analisa project",
+        "struktur project",
+        "project ini",
+        "proyek ini",
+        "analisis proyek",
+        "analisa proyek"
+      ],
+      "requires_required_files": true,
+      "focus": "Beri gambaran project backend Python: tujuan aplikasi, framework yang dipakai, entrypoint, routing/API, service/business logic, model/schema, database, konfigurasi, dependensi, batasan analisis, dan rekomendasi lanjutan.",
+      "file_strategy": {
+        "quick": [
+          "entrypoint",
+          "app_factory",
+          "config",
+          "route_handler"
+        ],
+        "normal": [
+          "entrypoint",
+          "app_factory",
+          "config",
+          "route_handler",
+          "route_handler",
+          "service_layer",
+          "model_or_schema",
+          "model_or_schema",
+          "data_access"
+        ],
+        "deep": [
+          "entrypoint",
+          "app_factory",
+          "config",
+          "dependency_manifest",
+          "route_handler",
+          "route_handler",
+          "route_handler",
+          "service_layer",
+          "service_layer",
+          "model_or_schema",
+          "model_or_schema",
+          "data_access",
+          "auth_security",
+          "external_provider"
+        ]
+      },
+      "final_format": [
+        "## Ringkasan",
+        "## Tujuan Backend",
+        "## Arsitektur Utama",
+        "## Alur Request Backend",
+        "## Komponen Penting",
+        "## Database dan Konfigurasi",
+        "## File yang Dibaca Langsung",
+        "## Batasan Analisis",
+        "## Rekomendasi Lanjutan"
+      ]
+    },
+    "workflow": {
+      "priority": 100,
+      "keywords": [
+        "alur kerja",
+        "workflow",
+        "cara kerja",
+        "flow project",
+        "flow proyek",
+        "proses kerja"
+      ],
+      "requires_required_files": true,
+      "focus": "Fokus pada alur end-to-end backend Python: proses dari server start, app initialization, route/API menerima request, validasi input, service/business logic, akses database/model/schema, response/error handling, sampai output dikembalikan.",
+      "file_strategy": {
+        "quick": [
+          "entrypoint",
+          "app_factory",
+          "route_handler",
+          "service_layer"
+        ],
+        "normal": [
+          "entrypoint",
+          "app_factory",
+          "config",
+          "route_handler",
+          "route_handler",
+          "service_layer",
+          "service_layer",
+          "model_or_schema",
+          "model_or_schema",
+          "data_access"
+        ],
+        "deep": [
+          "entrypoint",
+          "app_factory",
+          "config",
+          "dependency_manifest",
+          "route_handler",
+          "route_handler",
+          "route_handler",
+          "service_layer",
+          "service_layer",
+          "service_layer",
+          "model_or_schema",
+          "model_or_schema",
+          "data_access",
+          "data_access",
+          "auth_security",
+          "external_provider"
+        ]
+      },
+      "final_format": [
+        "## Ringkasan Alur",
+        "## Alur End-to-End",
+        "## Alur Request/API",
+        "## Peran Tiap Layer",
+        "## Database dan State",
+        "## File yang Dibaca Langsung",
+        "## Bagian yang Masih Inferensi",
+        "## Batasan Analisis"
+      ]
+    },
+    "debug": {
+      "priority": 90,
+      "keywords": [
+        "debug",
+        "error",
+        "gagal",
+        "kenapa",
+        "bug",
+        "traceback",
+        "exception",
+        "tidak jalan"
+      ],
+      "requires_required_files": false,
+      "focus": "Fokus mencari penyebab masalah backend Python dari error/traceback, route/service/model/config terkait, bukti kode, dan cara verifikasi.",
+      "file_strategy": {
+        "quick": [],
+        "normal": [],
+        "deep": []
+      },
+      "final_format": [
+        "## Ringkasan",
+        "## Kemungkinan Penyebab",
+        "## Bukti dari Notes",
+        "## File yang Dibaca Langsung",
+        "## Yang Masih Perlu Dicek",
+        "## Cara Verifikasi"
+      ]
+    },
+    "review": {
+      "priority": 80,
+      "keywords": [
+        "review",
+        "audit",
+        "cek bug",
+        "security",
+        "maintainability",
+        "risiko"
+      ],
+      "requires_required_files": true,
+      "focus": "Fokus review backend Python: bug behavior, validasi input, error handling, security/auth, database transaction, config/secret handling, maintainability, dan test gap.",
+      "file_strategy": {
+        "quick": [
+          "entrypoint",
+          "config",
+          "route_handler",
+          "service_layer"
+        ],
+        "normal": [
+          "entrypoint",
+          "config",
+          "route_handler",
+          "route_handler",
+          "service_layer",
+          "service_layer",
+          "model_or_schema",
+          "model_or_schema",
+          "data_access",
+          "auth_security"
+        ],
+        "deep": [
+          "entrypoint",
+          "config",
+          "dependency_manifest",
+          "route_handler",
+          "route_handler",
+          "route_handler",
+          "service_layer",
+          "service_layer",
+          "service_layer",
+          "model_or_schema",
+          "model_or_schema",
+          "data_access",
+          "data_access",
+          "auth_security",
+          "external_provider"
+        ]
+      },
+      "final_format": [
+        "## Ringkasan",
+        "## Findings",
+        "## Risiko Security dan Data",
+        "## Risiko Desain",
+        "## File yang Dibaca Langsung",
+        "## Yang Masih Perlu Dicek",
+        "## Rekomendasi Lanjutan"
+      ]
+    }
+  },
+  "file_role_patterns": {
+    "entrypoint": [
+      "main.py",
+      "app.py",
+      "run.py",
+      "server.py",
+      "manage.py",
+      "wsgi.py",
+      "asgi.py",
+      "app/main.py",
+      "src/main.py"
+    ],
+    "app_factory": [
+      "app/__init__.py",
+      "src/__init__.py",
+      "__init__.py",
+      "create_app",
+      "factory",
+      "application.py"
+    ],
+    "config": [
+      "settings.py",
+      "config.py",
+      "app/config.py",
+      "src/config.py",
+      "config/",
+      ".env.example",
+      "docker-compose.yml",
+      "docker-compose.yaml",
+      "Dockerfile"
+    ],
+    "dependency_manifest": [
+      "requirements.txt",
+      "pyproject.toml",
+      "poetry.lock",
+      "pipfile",
+      "pipfile.lock",
+      "setup.py",
+      "setup.cfg"
+    ],
+    "route_handler": [
+      "routes/",
+      "routers/",
+      "views/",
+      "controllers/",
+      "blueprints/",
+      "endpoints/",
+      "api/",
+      "route",
+      "router",
+      "view",
+      "controller",
+      "endpoint"
+    ],
+    "service_layer": [
+      "services/",
+      "service/",
+      "usecases/",
+      "use_cases/",
+      "business/",
+      "domain/",
+      "handlers/",
+      "service",
+      "usecase",
+      "use_case"
+    ],
+    "model_or_schema": [
+      "models/",
+      "schemas/",
+      "serializers/",
+      "entities/",
+      "dto/",
+      "model",
+      "schema",
+      "serializer",
+      "entity"
+    ],
+    "data_access": [
+      "repositories/",
+      "repository/",
+      "dao/",
+      "database/",
+      "db/",
+      "migrations/",
+      "alembic/",
+      "repository",
+      "database",
+      "session",
+      "connection"
+    ],
+    "auth_security": [
+      "auth/",
+      "security/",
+      "permissions/",
+      "middleware/",
+      "auth",
+      "jwt",
+      "token",
+      "permission",
+      "role",
+      "login"
+    ],
+    "external_provider": [
+      "providers/",
+      "clients/",
+      "adapters/",
+      "integrations/",
+      "external/",
+      "provider",
+      "client",
+      "adapter",
+      "payment",
+      "gateway",
+      "email",
+      "sms",
+      "whatsapp",
+      "storage",
+      "http"
+    ]
+  }
+}

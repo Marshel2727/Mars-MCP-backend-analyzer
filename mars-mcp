@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_PATH="$(cygpath -w "$SCRIPT_DIR/mars-mcp.ps1")"
+
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$SCRIPT_PATH"
